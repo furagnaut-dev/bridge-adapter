@@ -42,7 +42,7 @@ func main() {
 		if err := critical.Send(); err != nil {
 			log.Fatal(err)
 		}
-		fmt.Printf("Critical Alert System: {To Collection: %q, Backup: %q, Message: %q, Channel: %T}",
+		fmt.Printf("Critical Alert System: {To Maintenance: %q, To Facilities: %q, Message: %q, Channel: %T}",
 		critical.CollectionsTo, critical.FacilitiesTo, critical.Message, channel)
 	default:
 		log.Fatal("alert type is either regular or critical")
