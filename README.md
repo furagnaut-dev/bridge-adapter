@@ -1,4 +1,4 @@
-## UML class diagram
+## UML water leak alert signal system diagram
 
 ```mermaid
 classDiagram
