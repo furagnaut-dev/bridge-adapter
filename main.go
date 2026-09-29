@@ -32,7 +32,7 @@ func main() {
 		}
 
 		fmt.Printf("Regular Alert System: {To: %q, Message: %q, Channel: %T}",
-		regular.To, regular.Message, channel)
+		regular.CollectionsTo, regular.Message, channel)
 	case "critical":
 		if len(os.Args) != 6 {
 			os.Exit(2)
@@ -42,8 +42,8 @@ func main() {
 		if err := critical.Send(); err != nil {
 			log.Fatal(err)
 		}
-		fmt.Printf("Critical Alert System: {Primary: %q, Backup: %q, Message: %q, Channel: %T}",
-		critical.Primary, critical.Backup, critical.Message, channel)
+		fmt.Printf("Critical Alert System: {To Collection: %q, Backup: %q, Message: %q, Channel: %T}",
+		critical.CollectionsTo, critical.FacilitiesTo, critical.Message, channel)
 	default:
 		log.Fatal("alert type is either regular or critical")
 	}

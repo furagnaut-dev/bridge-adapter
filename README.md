@@ -19,8 +19,8 @@ classDiagram
     }
 
     class CriticalAlert {
-        +Primary string
-        +Backup string
+        +CollectionTo string
+        +FaciitiesTo string
         +Message string
         +Send() error
     }
